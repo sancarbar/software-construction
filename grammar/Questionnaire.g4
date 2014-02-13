@@ -1,7 +1,7 @@
-grammar Questionare;         
+grammar Questionnaire;
 import CommonLexerRules; 
 
-prog:   'form' ID '{' question+ '}'; 
+questionnaire:   'form' ID '{' question+ '}';
 
 question: ID ':' STRING type (expr)?
 	|	'if' '(' expr ')' '{' question+ '}'

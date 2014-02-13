@@ -19,10 +19,10 @@ public class Q {
         InputStream is = System.in;
         if ( inputFile!=null ) is = new FileInputStream(inputFile);
         ANTLRInputStream input = new ANTLRInputStream(is);
-        QuestionareLexer lexer = new QuestionareLexer(input);
+        QuestionnaireLexer lexer = new QuestionnaireLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
-        QuestionareParser parser = new QuestionareParser(tokens);
-        ParseTree tree = parser.prog(); // parse
+        QuestionnaireParser parser = new QuestionnaireParser(tokens);
+        ParseTree tree = parser.questionnaire(); // parse
 
         //EvalVisitor eval = new EvalVisitor();
         //eval.visit(tree);
